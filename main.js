@@ -5,7 +5,7 @@ var count;
 var histories = [];
 var tableJQ = $('#rate');
 var tweetplace = $('#tweetbutton');
-var MaxRate = 3000;
+var MaxRate = 2000;
 var MinRate = 1000;
 
 $(function() {
@@ -26,7 +26,7 @@ $(function() {
 });
 
 function getData(){
-    MaxRate = 3000;
+    MaxRate = 2000;
     MinRate = 1000;
     count = 0;
     user.length = 0;
