@@ -137,10 +137,12 @@ function makeTable(){
 
 
         var $widget = $("#twitter-widget-0");
-        var src = $widget.attr("src");
+        var src = 'https://platform.twitter.com/widgets/tweet_button.73a792b0fbc7ab73a8e3b3db9c36a8ac.en.html#dnt=false&id=twitter-widget-0&lang=en&original_referer=https://rika0384.github.io/codeforces_rating_comparison/index.html&size=m&text=&url=https://rika0384.github.io/codeforces_rating_comparison/index.html';
         var url = src.replace(/\&text=.*\&/, "&text=" + encodeURIComponent(tweet) + "&");
+        console.log(url);
         url += encodeURIComponent(location.search);
-
+        console.log(location.search);
+        console.log(url);
         $widget.attr({src: url});
         tweetplace.html($widget);
 
