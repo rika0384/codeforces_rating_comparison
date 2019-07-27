@@ -64,8 +64,10 @@ function getCodeforcesRating(handle){
                   highest = Math.max(highest, Number(data.result[i].newRating));
                   lowest = Math.min(lowest, Number(data.result[i].newRating));
               }
-              if(highest > MaxRate) MaxRate = highest + 400;
-              if(lowest < MinRate) MinRate = lowest - 400;
+              if(highest+400 > MaxRate) MaxRate = highest + 400;
+              if(lowest-400 < MinRate) MinRate = lowest - 400;
+              //console.log(highest);
+              //console.log(lowest);
               //console.log(MaxRate);
               rate.push([handle,Number(data.result[data.result.length-1].newRating),highest]);
               histories.push([handle,data.result]);
